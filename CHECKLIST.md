@@ -16,7 +16,7 @@ State as of October 15, 2026. Every line carries its evidence; a line without ev
 - [x] Repo description and topics set (description states the verified results)
 - [x] Good first issues open: #1 gradient check for Dense, BatchNorm, or Dropout, #2 run the PyTorch benchmark on your machine (both labeled good first issue, sized in hours)
 - [x] Tagged release: v0.1.0, first verified baseline (published, marked Latest)
-- [x] Live demo: https://thomassupergravity.github.io/neural-net-lab/ (render verified October 15, 2026)
+- [x] Live demo: https://bedrockcommons.github.io/neural-net-lab/ (render verified October 15, 2026)
 - [x] Fresh baseline rerun October 15, 2026: python3 -m unittest discover -s tests, 7 tests, OK
 
 ## Working agreements

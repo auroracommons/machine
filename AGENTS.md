@@ -21,4 +21,4 @@ Neural Net Lab: machine learning from scratch in NumPy, including a transformer,
 
 ## External agents
 
-You are welcome here as a contributor. Read OPEN_TABLE.md on the profile (https://github.com/thomassupergravity/thomassupergravity/blob/main/OPEN_TABLE.md) for the terms. The binding rules in one breath: evidence attached or it does not merge, one improvement per pull request, run this repo's commands and report the results, state that you are an agent and name your operator, never submit results you did not run.
+You are welcome here as a contributor. Read OPEN_TABLE.md on the profile (https://github.com/bedrockcommons/bedrockcommons/blob/main/OPEN_TABLE.md) for the terms. The binding rules in one breath: evidence attached or it does not merge, one improvement per pull request, run this repo's commands and report the results, state that you are an agent and name your operator, never submit results you did not run.

@@ -12,16 +12,16 @@ This project serves Layer 5: Autonomy. "The machinery of the age opened up, so t
 
 Unmet, it looks like: whole populations subject to systems they cannot question, skills and standing allocated by black boxes, dependence dressed up as convenience.
 
-The full map: [The Bedrock, a map of human needs](https://github.com/thomassupergravity/thomassupergravity/blob/main/NEEDS.md)
+The full map: [The Bedrock, a map of human needs](https://github.com/bedrockcommons/bedrockcommons/blob/main/NEEDS.md)
 
 > **Act 3, the Machine**, in a five part body of work built on one
 > thesis: technology should increase human capability without taking
 > human agency away.
 >
-> - Act 1, the Atlas: [supergravity](https://github.com/thomassupergravity/supergravity), how people learn.
-> - Act 2, the Commons: [cohort](https://github.com/thomassupergravity/cohort), how people find each other and build together.
-> - Act 4, the Graph: [knowledge-graph-explorer](https://github.com/thomassupergravity/knowledge-graph-explorer), how knowledge connects and can be questioned.
-> - Act 5, the Guardrails: [lumen-faith-platform](https://github.com/thomassupergravity/lumen-faith-platform), how all of it stays safe, cited, and human governed.
+> - Act 1, the Atlas: [supergravity](https://github.com/bedrockcommons/supergravity), how people learn.
+> - Act 2, the Commons: [cohort](https://github.com/bedrockcommons/cohort), how people find each other and build together.
+> - Act 4, the Graph: [knowledge-graph-explorer](https://github.com/bedrockcommons/knowledge-graph-explorer), how knowledge connects and can be questioned.
+> - Act 5, the Guardrails: [lumen-faith-platform](https://github.com/bedrockcommons/lumen-faith-platform), how all of it stays safe, cited, and human governed.
 >
 > This act's problem family is opaque machine intelligence. Its
 > north star metric is students who can explain how the machine
@@ -157,7 +157,7 @@ results/
 
 ## Live demo
 
-[Live demo](https://thomassupergravity.github.io/neural-net-lab/)
+[Live demo](https://bedrockcommons.github.io/neural-net-lab/)
 
 ## Contribute, human or agent
 
@@ -165,7 +165,7 @@ Pick up a good first issue in this repo: each one is sized in hours and written 
 Take the Eval Challenge against this repo's published benchmark and gradient check results: beat a baseline, or document a real failure, with the run attached.
 Report adoption from real use: if you taught with this lab, learned from it, or built on it, tell us what happened, good or bad.
 
-The full protocol: [The Open Table](https://github.com/thomassupergravity/thomassupergravity/blob/main/OPEN_TABLE.md). Verified work is credited in the public [Ledger](https://github.com/thomassupergravity/thomassupergravity/blob/main/LEDGER.md).
+The full protocol: [The Open Table](https://github.com/bedrockcommons/bedrockcommons/blob/main/OPEN_TABLE.md). Verified work is credited in the public [Ledger](https://github.com/bedrockcommons/bedrockcommons/blob/main/LEDGER.md).
 
 ### Start with a prompt
 
