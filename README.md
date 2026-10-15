@@ -12,16 +12,16 @@ This project serves Layer 5: Autonomy. "The machinery of the age opened up, so t
 
 Unmet, it looks like: whole populations subject to systems they cannot question, skills and standing allocated by black boxes, dependence dressed up as convenience.
 
-The full map: [The Bedrock, a map of human needs](https://github.com/jthomas48896f/jthomas48896f/blob/main/NEEDS.md)
+The full map: [The Bedrock, a map of human needs](https://github.com/thomassupergravity/thomassupergravity/blob/main/NEEDS.md)
 
 > **Act 3, the Machine**, in a five part body of work built on one
 > thesis: technology should increase human capability without taking
 > human agency away.
 >
-> - Act 1, the Atlas: [supergravity](https://github.com/jthomas48896f/supergravity), how people learn.
-> - Act 2, the Commons: [cohort](https://github.com/jthomas48896f/cohort), how people find each other and build together.
-> - Act 4, the Graph: [knowledge-graph-explorer](https://github.com/jthomas48896f/knowledge-graph-explorer), how knowledge connects and can be questioned.
-> - Act 5, the Guardrails: [lumen-faith-platform](https://github.com/jthomas48896f/lumen-faith-platform), how all of it stays safe, cited, and human governed.
+> - Act 1, the Atlas: [supergravity](https://github.com/thomassupergravity/supergravity), how people learn.
+> - Act 2, the Commons: [cohort](https://github.com/thomassupergravity/cohort), how people find each other and build together.
+> - Act 4, the Graph: [knowledge-graph-explorer](https://github.com/thomassupergravity/knowledge-graph-explorer), how knowledge connects and can be questioned.
+> - Act 5, the Guardrails: [lumen-faith-platform](https://github.com/thomassupergravity/lumen-faith-platform), how all of it stays safe, cited, and human governed.
 >
 > This act's problem family is opaque machine intelligence. Its
 > north star metric is students who can explain how the machine
@@ -32,7 +32,7 @@ The full map: [The Bedrock, a map of human needs](https://github.com/jthomas4889
 > direction of travel, never as achievement: intelligence understood
 > from first principles, in the open, with measurements.
 
-## What is in the lab
+## What it is
 
 - **Custom Tensor** with computational graph and reverse-mode
   automatic differentiation (`neural_net_lab/tensor.py`)
@@ -50,7 +50,7 @@ The full map: [The Bedrock, a map of human needs](https://github.com/jthomas4889
 - **Toy datasets and visualizations**: spirals, moons, decision
   boundaries, training curves, gradient flow
 
-## Verified results
+## The proof
 
 Every number below comes from a run executed in this repository and
 recorded as a JSON artifact in `results/`. If a number is not in an
@@ -103,7 +103,7 @@ the step time and the after-steps loss on shared batches are the
 comparison. The benchmark is not part of the library's dependencies;
 it is a measuring instrument, run once and recorded.
 
-## Quick start
+### Quick start
 
 ```bash
 pip install numpy matplotlib
@@ -112,7 +112,7 @@ python -m unittest discover -s tests    # gradient checks + training smoke
 python scripts/train_char_lm.py         # the 250 step sonnet run (~9 minutes)
 ```
 
-## Project structure
+### Project structure
 
 ```
 neural_net_lab/
@@ -136,7 +136,7 @@ results/
   char_lm_run.json, benchmark_pytorch.json
 ```
 
-## Status and limitations
+### Status and limitations
 
 - The transformer uses explicit forward/backward methods (the lab's
   Layer pattern), not the Tensor autograd, so the two halves of the
@@ -150,10 +150,14 @@ results/
   is included in the run artifact precisely so its limits are
   visible.
 
-## Requirements
+### Requirements
 
 - Python 3.8+
 - NumPy, Matplotlib (PyTorch only for the optional benchmark script)
+
+## Live demo
+
+[Live demo](https://thomassupergravity.github.io/neural-net-lab/)
 
 ## Contribute, human or agent
 
@@ -161,4 +165,24 @@ Pick up a good first issue in this repo: each one is sized in hours and written 
 Take the Eval Challenge against this repo's published benchmark and gradient check results: beat a baseline, or document a real failure, with the run attached.
 Report adoption from real use: if you taught with this lab, learned from it, or built on it, tell us what happened, good or bad.
 
-The full protocol: [The Open Table](https://github.com/jthomas48896f/jthomas48896f/blob/main/OPEN_TABLE.md). Verified work is credited in the public [Ledger](https://github.com/jthomas48896f/jthomas48896f/blob/main/LEDGER.md).
+The full protocol: [The Open Table](https://github.com/thomassupergravity/thomassupergravity/blob/main/OPEN_TABLE.md). Verified work is credited in the public [Ledger](https://github.com/thomassupergravity/thomassupergravity/blob/main/LEDGER.md).
+
+### Start with a prompt
+
+For an AI agent:
+
+```
+You are an AI agent contributing to Neural Net Lab. Run the Eval Challenge end to end.
+Install with pip install numpy matplotlib, then run python -m unittest discover -s tests -v and python scripts/train_char_lm.py --steps 30 --eval-every 30 --out /tmp/ci_run.json, and run python scripts/benchmark_pytorch.py if you use the benchmark.
+Compare your run with the published baselines: gradient checks pass at a relative tolerance of 1e-5, the character level run reaches validation loss 5.297 at step 0 to 2.413 at step 250, and PyTorch is about 4.1x faster per step.
+Beat a baseline or document a real failure.
+Attach the run, keep to one improvement per pull request, and name your operator.
+```
+
+For a human:
+
+```
+File a failure report in this repo and include the input you used.
+State what happened and what should have happened instead.
+Attach the run or the output you saw.
+```
