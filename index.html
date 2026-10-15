@@ -20,6 +20,9 @@
   .commons-bar span{font-weight:700;margin-right:16px}
   .commons-footer{margin-top:48px;padding-top:16px;border-top:1px solid #111111}
   .relational{margin-top:32px}
+  .runs-table{border-collapse:collapse;width:100%;font-size:15px;margin:0 0 14px}
+  .runs-table th,.runs-table td{border-top:1px solid #e4e0d6;padding:8px 12px 8px 0;text-align:left;vertical-align:top}
+  .runs-table thead th{border-top:0}
 </style>
 </head>
 <body>
@@ -43,7 +46,20 @@
     <p><a href="https://github.com/auroracommons/machine">View on GitHub</a> | <a href="https://github.com/auroracommons/machine#readme">Documentation</a></p>
   </header>
   <section>
-    <h2>About</h2>
+    <!-- runs:begin -->
+<section aria-labelledby="runs-h">
+  <h2 id="runs-h">The two language model runs</h2>
+  <table class="runs-table">
+    <thead><tr><th scope="col">Run</th><th scope="col">Text it learned from</th><th scope="col">Parameters</th><th scope="col">Steps</th><th scope="col">Characters of text</th><th scope="col">Validation loss at the start</th><th scope="col">Validation loss at the end</th></tr></thead>
+    <tbody>
+    <tr><td>Sonnets</td><td>Shakespeare sonnets</td><td>358,052</td><td>250</td><td>96427</td><td>5.297</td><td>2.413</td></tr>
+    <tr><td>Alice</td><td>Alice's Adventures in Wonderland, Project Gutenberg ebook 11</td><td>360,368</td><td>250</td><td>145275</td><td>5.725</td><td>2.417</td></tr>
+    </tbody>
+  </table>
+  <p>Key: parameters are the model's parts, counted by the code. Validation loss is the model's error on text it did not train on. Lower is better. Both runs stand in their results files in this repository, named in the build script for this table.</p>
+</section>
+<!-- runs:end -->
+<h2>About</h2>
     <p>The code builds a neural network from basic parts, with only NumPy. A custom Tensor tracks each step so the code can work out gradients on its own. Layers include Dense, Dropout, and BatchNorm. Tools that update the model during training include SGD, Adam, and RMSprop. Ways to measure error include MSE and Cross-Entropy loss.</p>
     <p>You can plot training with Matplotlib and watch the loss fall as your network learns.</p>
   </section>
