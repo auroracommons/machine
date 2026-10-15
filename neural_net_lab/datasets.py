@@ -202,7 +202,7 @@ def make_mnist_subset(n_samples=500, digits=None, image_size=8, random_state=Non
     """
     Generate a procedural MNIST-like digit dataset.
 
-    Creates simplified digit images procedurally using basic drawing primitives.
+    Creates simplified digit images procedurally using basic tools for drawing.
     Not real MNIST, but mimics its structure for testing multi-class classifiers.
 
     Args:

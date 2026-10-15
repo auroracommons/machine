@@ -1,10 +1,32 @@
+<style>
+.commons-bar { padding: 1em 0; }
+.commons-bar a, .commons-bar span { margin-right: 1em; }
+.commons-bar span[aria-current="page"] { font-weight: bold; }
+.commons-footer { margin-top: 3em; }
+</style>
+
+<nav class="commons-bar" aria-label="Aurora Commons sites">
+  <a href="https://auroracommons.github.io/auroracommons/">Aurora Commons</a>
+  <a href="https://auroracommons.github.io/auroracommons/foundations.html">Foundations</a>
+  <a href="https://auroracommons.github.io/ground/">Ground</a>
+  <a href="https://auroracommons.github.io/still/">Still</a>
+  <a href="https://auroracommons.github.io/atlas/">Atlas</a>
+  <a href="https://auroracommons.github.io/cohort/">Cohort</a>
+  <a href="https://auroracommons.github.io/graph/">Graph</a>
+  <span aria-current="page">Machine</span>
+  <a href="https://auroracommons.github.io/lumen/">Lumen</a>
+</nav>
+
 # Machine
 
-A neural network library built entirely from scratch in NumPy: a
-custom autograd tensor, layers, optimizers, and now a decoder-only
-transformer whose gradients are verified against finite differences.
-Nothing in the core library calls a framework. The framework appears
-only in one benchmark script, as the thing being measured against.
+Machine serves autonomy, Layer 5. Here you learn how a neural
+network works by building one from scratch in NumPy. You get code
+you can read, run, and change. The library has a custom Tensor that
+works out gradients, layers, and tools that update the model during
+training. It also has a decoder-only transformer. Tests check its
+gradients against finite differences. The core library does not call
+a framework. A framework shows up only in one benchmark script,
+where the script measures the library against it.
 
 Aurora Commons addresses the hierarchy of human needs through open source.
 
@@ -16,7 +38,7 @@ Advised by Groundskeeper.
 
 ## The need
 
-This project serves Layer 5: Autonomy. "The machinery of the age opened up, so that understanding is not the property of a priesthood. A society that cannot explain its own machines will be governed by whoever can." Machine serves that need by building machine learning from scratch in NumPy, with a transformer whose gradients are verified against finite differences, so the machine can be explained from first principles.
+This project serves Layer 5: Autonomy. "The machinery of the age opened up, so that understanding is not the property of a priesthood. A society that cannot explain its own machines will be governed by whoever can." Machine meets that need in a plain way. It builds machine learning from scratch in NumPy. Tests check the transformer gradients against finite differences. So a reader can see each step and explain how the machine learns.
 
 Unmet, it looks like: whole populations subject to systems they cannot question, skills and standing allocated by black boxes, dependence dressed up as convenience.
 
@@ -221,3 +243,19 @@ File a failure report in this repo and include the input you used.
 State what happened and what should have happened instead.
 Attach the run or the output you saw.
 ```
+
+<p>The layer below: <a href="https://auroracommons.github.io/graph/">Graph, shared truth</a></p>
+<p>The layer above: <a href="https://auroracommons.github.io/lumen/">Lumen, trust and meaning</a></p>
+<p>The research under this layer: <a href="https://auroracommons.github.io/auroracommons/foundations.html#artificial-intelligence-and-human-computer-interaction">Foundations, Artificial intelligence and human computer interaction</a></p>
+
+Built on Graph: shared truth.
+
+Unlocks the ability to build.
+
+<footer class="commons-footer">
+  <p>Aurora Commons addresses the hierarchy of human needs through open source.</p>
+  <p>Motto: Stand on the shoulders of giants.</p>
+  <p>One rule: Raise the floor beneath everyone.</p>
+  <p>Advised by Groundskeeper.</p>
+  <p><a href="https://www.linkedin.com/company/aurora-commons-io/">Aurora Commons on LinkedIn</a></p>
+</footer>
