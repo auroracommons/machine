@@ -1,0 +1,31 @@
+{
+  "config": {
+    "d_model": 96,
+    "n_layer": 3,
+    "n_head": 4,
+    "block_size": 96,
+    "batch_size": 16,
+    "lr": 0.003,
+    "steps_timed": 30,
+    "warmup_steps": 3
+  },
+  "environment": {
+    "numpy": "2.5.4",
+    "torch": "2.5.1+cpu",
+    "torch_threads": 2,
+    "python": "3.12.3"
+  },
+  "numpy_lab": {
+    "parameters": 358052,
+    "mean_step_ms": 498.46557023335356,
+    "eval_loss_before": 5.25594748784186,
+    "eval_loss_after": 2.8666711639823586
+  },
+  "pytorch": {
+    "parameters": 358052,
+    "mean_step_ms": 120.58886433337648,
+    "eval_loss_before": 4.35632095336914,
+    "eval_loss_after": 2.5288756132125854
+  },
+  "speed_ratio_torch_faster_by": 4.13
+}

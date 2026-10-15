@@ -1,0 +1,57 @@
+{
+  "config": {
+    "d_model": 96,
+    "n_layer": 3,
+    "n_head": 4,
+    "block_size": 96,
+    "batch_size": 16,
+    "lr": 0.003,
+    "steps": 250,
+    "seed": 42
+  },
+  "corpus_chars": 96427,
+  "vocab_size": 68,
+  "parameters": 358052,
+  "initial_train_loss": 5.25594748784186,
+  "initial_val_loss": 5.297012646153844,
+  "final_train_loss": 2.3773726431697995,
+  "final_val_loss": 2.4133703962323776,
+  "history": [
+    {
+      "step": 0,
+      "train_loss": 5.25594748784186,
+      "val_loss": 5.297012646153844
+    },
+    {
+      "step": 50,
+      "train_loss": 2.700746875897155,
+      "val_loss": 2.7073216481718663
+    },
+    {
+      "step": 100,
+      "train_loss": 2.4881107840663135,
+      "val_loss": 2.518106784626343
+    },
+    {
+      "step": 150,
+      "train_loss": 2.424298424509766,
+      "val_loss": 2.4615998690451817
+    },
+    {
+      "step": 200,
+      "train_loss": 2.3927356863937637,
+      "val_loss": 2.425342324475146
+    },
+    {
+      "step": 250,
+      "train_loss": 2.3773726431697995,
+      "val_loss": 2.4133703962323776
+    }
+  ],
+  "wall_seconds": 508.24899538399995,
+  "mean_step_ms": 1756.8821215560065,
+  "python": "3.12.3",
+  "numpy": "1.26.4",
+  "sample_prompt": "Shall I compare thee",
+  "sample_text": "Shall I compare theeeromer the g,\nAny pve pachesheal bof  t ererir merde imathy othand ay s thatove cor theancathe,\n icay mis praprt t thano prer be guralthy my onons miteriots.\n\n\n\nWhareas whee  llll thort   char ofabethothar trs gaderathatofaso sous tove s owe mo iemy in e m thaco be te,\nFeathidersom mue nho athivousa"
+}
