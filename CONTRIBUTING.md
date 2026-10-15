@@ -1,4 +1,4 @@
-# Contributing to Neural Net Lab
+# Contributing to Machine
 
 Contributions are welcome, and the door is kept visibly open: there
 is always at least one good first issue available. The house rule is

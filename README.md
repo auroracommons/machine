@@ -1,4 +1,4 @@
-# Neural Net Lab
+# Machine
 
 A neural network library built entirely from scratch in NumPy: a
 custom autograd tensor, layers, optimizers, and now a decoder-only
@@ -8,20 +8,20 @@ only in one benchmark script, as the thing being measured against.
 
 ## The need
 
-This project serves Layer 5: Autonomy. "The machinery of the age opened up, so that understanding is not the property of a priesthood. A society that cannot explain its own machines will be governed by whoever can." Neural Net Lab serves that need by building machine learning from scratch in NumPy, with a transformer whose gradients are verified against finite differences, so the machine can be explained from first principles.
+This project serves Layer 5: Autonomy. "The machinery of the age opened up, so that understanding is not the property of a priesthood. A society that cannot explain its own machines will be governed by whoever can." Machine serves that need by building machine learning from scratch in NumPy, with a transformer whose gradients are verified against finite differences, so the machine can be explained from first principles.
 
 Unmet, it looks like: whole populations subject to systems they cannot question, skills and standing allocated by black boxes, dependence dressed up as convenience.
 
-The full map: [The Bedrock, a map of human needs](https://github.com/bedrockcommons/bedrockcommons/blob/main/NEEDS.md)
+The full map: [The Ascent, a map of human needs](https://github.com/auroracommons/auroracommons/blob/main/NEEDS.md)
 
 > **Act 3, the Machine**, in a five part body of work built on one
 > thesis: technology should increase human capability without taking
 > human agency away.
 >
-> - Act 1, the Atlas: [supergravity](https://github.com/bedrockcommons/supergravity), how people learn.
-> - Act 2, the Commons: [cohort](https://github.com/bedrockcommons/cohort), how people find each other and build together.
-> - Act 4, the Graph: [knowledge-graph-explorer](https://github.com/bedrockcommons/knowledge-graph-explorer), how knowledge connects and can be questioned.
-> - Act 5, the Guardrails: [lumen-faith-platform](https://github.com/bedrockcommons/lumen-faith-platform), how all of it stays safe, cited, and human governed.
+> - Act 1, the Atlas: [atlas](https://github.com/auroracommons/atlas), how people learn.
+> - Act 2, the Commons: [cohort](https://github.com/auroracommons/cohort), how people find each other and build together.
+> - Act 4, the Graph: [graph](https://github.com/auroracommons/graph), how knowledge connects and can be questioned.
+> - Act 5, the Guardrails: [lumen](https://github.com/auroracommons/lumen), how all of it stays safe, cited, and human governed.
 >
 > This act's problem family is opaque machine intelligence. Its
 > north star metric is students who can explain how the machine
@@ -157,7 +157,7 @@ results/
 
 ## Live demo
 
-[Live demo](https://bedrockcommons.github.io/neural-net-lab/)
+[Live demo](https://auroracommons.github.io/machine/)
 
 ## Contribute, human or agent
 
@@ -165,14 +165,14 @@ Pick up a good first issue in this repo: each one is sized in hours and written 
 Take the Eval Challenge against this repo's published benchmark and gradient check results: beat a baseline, or document a real failure, with the run attached.
 Report adoption from real use: if you taught with this lab, learned from it, or built on it, tell us what happened, good or bad.
 
-The full protocol: [The Open Table](https://github.com/bedrockcommons/bedrockcommons/blob/main/OPEN_TABLE.md). Verified work is credited in the public [Ledger](https://github.com/bedrockcommons/bedrockcommons/blob/main/LEDGER.md).
+The full protocol: [The Open Table](https://github.com/auroracommons/auroracommons/blob/main/OPEN_TABLE.md). Verified work is credited in the public [Ledger](https://github.com/auroracommons/auroracommons/blob/main/LEDGER.md).
 
 ### Start with a prompt
 
 For an AI agent:
 
 ```
-You are an AI agent contributing to Neural Net Lab. Run the Eval Challenge end to end.
+You are an AI agent contributing to Machine. Run the Eval Challenge end to end.
 Install with pip install numpy matplotlib, then run python -m unittest discover -s tests -v and python scripts/train_char_lm.py --steps 30 --eval-every 30 --out /tmp/ci_run.json, and run python scripts/benchmark_pytorch.py if you use the benchmark.
 Compare your run with the published baselines: gradient checks pass at a relative tolerance of 1e-5, the character level run reaches validation loss 5.297 at step 0 to 2.413 at step 250, and PyTorch is about 4.1x faster per step.
 Beat a baseline or document a real failure.

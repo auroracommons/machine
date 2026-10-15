@@ -1,6 +1,6 @@
-# Collaborate on Neural Net Lab
+# Collaborate on Machine
 
-Neural Net Lab serves one problem family: opaque machine
+Machine serves one problem family: opaque machine
 intelligence. This page lists concrete, scoped ways an organization
 can work with the project. Every task here is real and completable.
 Nothing on this page implies an existing partnership; collaborations
