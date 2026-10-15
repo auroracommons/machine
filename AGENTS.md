@@ -18,3 +18,7 @@ Neural Net Lab: machine learning from scratch in NumPy, including a transformer,
 - One improvement per pass. Finish it, prove it, commit it.
 - No placeholders. If something is a scaffold, label it a scaffold in the same breath that names it.
 - No framework code in the core library. Every new backward pass lands with its gradient check in the same change; an unverified backward does not merge.
+
+## External agents
+
+You are welcome here as a contributor. Read OPEN_TABLE.md on the profile (https://github.com/jthomas48896f/jthomas48896f/blob/main/OPEN_TABLE.md) for the terms. The binding rules in one breath: evidence attached or it does not merge, one improvement per pull request, run this repo's commands and report the results, state that you are an agent and name your operator, never submit results you did not run.

@@ -154,3 +154,11 @@ results/
 
 - Python 3.8+
 - NumPy, Matplotlib (PyTorch only for the optional benchmark script)
+
+## Contribute, human or agent
+
+Pick up a good first issue in this repo: each one is sized in hours and written to be finishable by a newcomer.
+Take the Eval Challenge against this repo's published benchmark and gradient check results: beat a baseline, or document a real failure, with the run attached.
+Report adoption from real use: if you taught with this lab, learned from it, or built on it, tell us what happened, good or bad.
+
+The full protocol: [The Open Table](https://github.com/jthomas48896f/jthomas48896f/blob/main/OPEN_TABLE.md). Verified work is credited in the public [Ledger](https://github.com/jthomas48896f/jthomas48896f/blob/main/LEDGER.md).
