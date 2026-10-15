@@ -19,6 +19,8 @@
 
 # Machine
 
+First step: read the sonnets result in The proof below, where a 358,052 parameter transformer brought validation loss from 5.297 to 2.413 in 250 steps, then run the gradient test: python -m unittest discover -s tests.
+
 Machine serves autonomy, Layer 5. Here you learn how a neural
 network works by building one from scratch in NumPy. You get code
 you can read, run, and change. The library has a custom Tensor that
@@ -27,43 +29,6 @@ training. It also has a decoder-only transformer. Tests check its
 gradients against finite differences. The core library does not call
 a framework. A framework shows up only in one benchmark script,
 where the script measures the library against it.
-
-Aurora Commons addresses the hierarchy of human needs through open source.
-
-Motto: Stand on the shoulders of giants.
-
-One rule: raise the floor beneath everyone.
-
-Advised by Groundskeeper.
-
-## The need
-
-This project serves Layer 5: Autonomy. "The machinery of the age opened up, so that understanding is not the property of a priesthood. A society that cannot explain its own machines will be governed by whoever can." Machine meets that need in a plain way. It builds machine learning from scratch in NumPy. Tests check the transformer gradients against finite differences. So a reader can see each step and explain how the machine learns.
-
-Unmet, it looks like: whole populations subject to systems they cannot question, skills and standing allocated by black boxes, dependence dressed up as convenience.
-
-The full map: [The Ascent, a map of human needs](https://github.com/auroracommons/auroracommons/blob/main/NEEDS.md)
-
-> **Machine, Layer 5: autonomy**, in the Ascent, built on one
-> thesis: technology should increase human capability without taking
-> human agency away.
->
-> - Ground (the body): [ground](https://auroracommons.github.io/ground/)
-> - Still (the mind at peace): [still](https://auroracommons.github.io/still/)
-> - Atlas (learning): [atlas](https://github.com/auroracommons/atlas)
-> - Cohort (belonging): [cohort](https://github.com/auroracommons/cohort)
-> - Graph (shared truth): [graph](https://github.com/auroracommons/graph)
-> - Machine (autonomy, Layer 5): this repo
-> - Lumen (trust and meaning): [lumen](https://github.com/auroracommons/lumen)
->
-> This layer's problem family is opaque machine intelligence. Its
-> north star metric is students who can explain how the machine
-> learns. No number is claimed for it yet; the lab is the instrument,
-> and the count starts when teaching with it starts.
->
-> The frame is the post AI renaissance, stated as aspiration and
-> direction of travel, never as achievement: intelligence understood
-> from first principles, in the open, with measurements.
 
 ## What it is
 
@@ -211,6 +176,35 @@ results/
 
 - Python 3.8+
 - NumPy, Matplotlib (PyTorch only for the optional benchmark script)
+
+## The need
+
+This project serves Layer 5: Autonomy. "The machinery of the age opened up, so that understanding is not the property of a priesthood. A society that cannot explain its own machines will be governed by whoever can." Machine meets that need in a plain way. It builds machine learning from scratch in NumPy. Tests check the transformer gradients against finite differences. So a reader can see each step and explain how the machine learns.
+
+Unmet, it looks like: whole populations subject to systems they cannot question, skills and standing allocated by black boxes, dependence dressed up as convenience.
+
+The full map: [The Ascent, a map of human needs](https://github.com/auroracommons/auroracommons/blob/main/NEEDS.md)
+
+> **Machine, Layer 5: autonomy**, in the Ascent, built on one
+> thesis: technology should increase human capability without taking
+> human agency away.
+>
+> - Ground (the body): [ground](https://auroracommons.github.io/ground/)
+> - Still (the mind at peace): [still](https://auroracommons.github.io/still/)
+> - Atlas (learning): [atlas](https://github.com/auroracommons/atlas)
+> - Cohort (belonging): [cohort](https://github.com/auroracommons/cohort)
+> - Graph (shared truth): [graph](https://github.com/auroracommons/graph)
+> - Machine (autonomy, Layer 5): this repo
+> - Lumen (trust and meaning): [lumen](https://github.com/auroracommons/lumen)
+>
+> This layer's problem family is opaque machine intelligence. Its
+> north star metric is students who can explain how the machine
+> learns. No number is claimed for it yet; the lab is the instrument,
+> and the count starts when teaching with it starts.
+>
+> The frame is the post AI renaissance, stated as aspiration and
+> direction of travel, never as achievement: intelligence understood
+> from first principles, in the open, with measurements.
 
 ## Live demo
 
