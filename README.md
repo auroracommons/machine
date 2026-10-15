@@ -250,6 +250,7 @@ Unlocks the ability to build.
   <p>Aurora Commons addresses the hierarchy of human needs through open source.</p>
   <p>Motto: Stand on the shoulders of giants.</p>
   <p>One rule: raise the floor beneath everyone.</p>
+  <p>Its record is filed in <a href="https://auroracommons.github.io/index/">the Index</a>.</p>
   <p>Advised by Groundskeeper.</p>
   <p><a href="https://www.linkedin.com/company/aurora-commons-io/">Aurora Commons on LinkedIn</a></p>
 </footer>
