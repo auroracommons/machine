@@ -5,16 +5,16 @@
 .commons-footer { margin-top: 3em; }
 </style>
 
-<nav class="commons-bar" aria-label="Aurora Commons sites">
-  <a href="https://auroracommons.github.io/auroracommons/">Aurora Commons</a>
-  <a href="https://auroracommons.github.io/auroracommons/foundations.html">Foundations</a>
-  <a href="https://auroracommons.github.io/ground/">Ground</a>
-  <a href="https://auroracommons.github.io/still/">Still</a>
-  <a href="https://auroracommons.github.io/atlas/">Atlas</a>
-  <a href="https://auroracommons.github.io/cohort/">Cohort</a>
-  <a href="https://auroracommons.github.io/graph/">Graph</a>
+<nav class="commons-bar" aria-label="Topsoil Commons sites">
+  <a href="https://topsoilcommons.github.io/topsoilcommons/"><svg class="bar-mark" viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false" style="flex:none;align-self:center;margin-right:7px"><g fill="currentColor"><rect x="4" y="2.5" width="16" height="2"/><rect x="4" y="5.5" width="16" height="2"/><rect x="4" y="8.5" width="16" height="2"/><rect x="4" y="11.5" width="4.5" height="8"/><rect x="15.5" y="11.5" width="4.5" height="8"/><rect x="2" y="20.5" width="20" height="2.2"/></g></svg>Topsoil Commons</a>
+  <a href="https://topsoilcommons.github.io/topsoilcommons/foundations.html">Foundations</a>
+  <a href="https://topsoilcommons.github.io/ground/">Ground</a>
+  <a href="https://topsoilcommons.github.io/still/">Still</a>
+  <a href="https://topsoilcommons.github.io/atlas/">Atlas</a>
+  <a href="https://topsoilcommons.github.io/cohort/">Cohort</a>
+  <a href="https://topsoilcommons.github.io/graph/">Graph</a>
   <span aria-current="page">Machine</span>
-  <a href="https://auroracommons.github.io/lumen/">Lumen</a>
+  <a href="https://topsoilcommons.github.io/lumen/">Lumen</a>
 </nav>
 
 # Machine
@@ -183,19 +183,19 @@ This project serves Layer 5: Autonomy. "The machinery of the age opened up, so t
 
 Unmet, it looks like: whole populations subject to systems they cannot question, skills and standing allocated by black boxes, dependence dressed up as convenience.
 
-The full map: [The Ascent, a map of human needs](https://github.com/auroracommons/auroracommons/blob/main/NEEDS.md)
+The full map: [The Ascent, a map of human needs](https://github.com/topsoilcommons/topsoilcommons/blob/main/NEEDS.md)
 
 > **Machine, Layer 5: autonomy**, in the Ascent, built on one
 > thesis: technology should increase human capability without taking
 > human agency away.
 >
-> - Ground (the body): [ground](https://auroracommons.github.io/ground/)
-> - Still (the mind at peace): [still](https://auroracommons.github.io/still/)
-> - Atlas (learning): [atlas](https://github.com/auroracommons/atlas)
-> - Cohort (belonging): [cohort](https://github.com/auroracommons/cohort)
-> - Graph (shared truth): [graph](https://github.com/auroracommons/graph)
+> - Ground (the body): [ground](https://topsoilcommons.github.io/ground/)
+> - Still (the mind at peace): [still](https://topsoilcommons.github.io/still/)
+> - Atlas (learning): [atlas](https://github.com/topsoilcommons/atlas)
+> - Cohort (belonging): [cohort](https://github.com/topsoilcommons/cohort)
+> - Graph (shared truth): [graph](https://github.com/topsoilcommons/graph)
 > - Machine (autonomy, Layer 5): this repo
-> - Lumen (trust and meaning): [lumen](https://github.com/auroracommons/lumen)
+> - Lumen (trust and meaning): [lumen](https://github.com/topsoilcommons/lumen)
 >
 > This layer's problem family is opaque machine intelligence. Its
 > north star metric is students who can explain how the machine
@@ -208,7 +208,7 @@ The full map: [The Ascent, a map of human needs](https://github.com/auroracommon
 
 ## Live demo
 
-[Live demo](https://auroracommons.github.io/machine/)
+[Live demo](https://topsoilcommons.github.io/machine/)
 
 ## Contribute, human or agent
 
@@ -216,7 +216,7 @@ Pick up a good first issue in this repo: each one is sized in hours and written 
 Take the Eval Challenge against this repo's published benchmark and gradient check results: beat a baseline, or document a real failure, with the run attached.
 Report adoption from real use: if you taught with this lab, learned from it, or built on it, tell us what happened, good or bad.
 
-The full protocol: [The Open Table](https://github.com/auroracommons/auroracommons/blob/main/OPEN_TABLE.md). Verified work is credited in the public [Ledger](https://github.com/auroracommons/auroracommons/blob/main/LEDGER.md).
+The full protocol: [The Open Table](https://github.com/topsoilcommons/topsoilcommons/blob/main/OPEN_TABLE.md). Verified work is credited in the public [Ledger](https://github.com/topsoilcommons/topsoilcommons/blob/main/LEDGER.md).
 
 ### Start with a prompt
 
@@ -238,19 +238,19 @@ State what happened and what should have happened instead.
 Attach the run or the output you saw.
 ```
 
-<p>The layer below: <a href="https://auroracommons.github.io/graph/">Graph, shared truth</a></p>
-<p>The layer above: <a href="https://auroracommons.github.io/lumen/">Lumen, trust and meaning</a></p>
-<p>The research under this layer: <a href="https://auroracommons.github.io/auroracommons/foundations.html#artificial-intelligence-and-human-computer-interaction">Foundations, Artificial intelligence and human computer interaction</a></p>
+<p>The layer below: <a href="https://topsoilcommons.github.io/graph/">Graph, shared truth</a></p>
+<p>The layer above: <a href="https://topsoilcommons.github.io/lumen/">Lumen, trust and meaning</a></p>
+<p>The research under this layer: <a href="https://topsoilcommons.github.io/topsoilcommons/foundations.html#artificial-intelligence-and-human-computer-interaction">Foundations, Artificial intelligence and human computer interaction</a></p>
 
 Built on Graph: shared truth.
 
 Unlocks the ability to build.
 
 <footer class="commons-footer">
-  <p>Aurora Commons addresses the hierarchy of human needs through open source.</p>
+  <p>Topsoil Commons addresses the hierarchy of human needs through open source.</p>
   <p>Motto: Stand on the shoulders of giants.</p>
   <p>One rule: raise the floor beneath everyone.</p>
-  <p>Its record is filed in <a href="https://auroracommons.github.io/index/">the Index</a>.</p>
+  <p>Its record is filed in <a href="https://topsoilcommons.github.io/index/">the Index</a>.</p>
   <p>Advised by Groundskeeper.</p>
-  <p><a href="https://www.linkedin.com/company/aurora-commons-io/">Aurora Commons on LinkedIn</a></p>
+  <p><a href="https://www.linkedin.com/company/topsoil-commons/">Topsoil Commons on LinkedIn</a></p>
 </footer>

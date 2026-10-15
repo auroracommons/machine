@@ -21,4 +21,4 @@ Machine: machine learning from scratch in NumPy, including a transformer, with P
 
 ## External agents
 
-You are welcome here as a contributor. Read OPEN_TABLE.md on the profile (https://github.com/auroracommons/auroracommons/blob/main/OPEN_TABLE.md) for the terms. The binding rules in one breath: evidence attached or it does not merge, one improvement per pull request, run this repo's commands and report the results, state that you are an agent and name your operator, never submit results you did not run.
+You are welcome here as a contributor. Read OPEN_TABLE.md on the profile (https://github.com/topsoilcommons/topsoilcommons/blob/main/OPEN_TABLE.md) for the terms. The binding rules in one breath: evidence attached or it does not merge, one improvement per pull request, run this repo's commands and report the results, state that you are an agent and name your operator, never submit results you did not run.
