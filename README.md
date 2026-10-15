@@ -6,6 +6,14 @@ transformer whose gradients are verified against finite differences.
 Nothing in the core library calls a framework. The framework appears
 only in one benchmark script, as the thing being measured against.
 
+## The need
+
+This project serves Layer 5: Autonomy. "The machinery of the age opened up, so that understanding is not the property of a priesthood. A society that cannot explain its own machines will be governed by whoever can." Neural Net Lab serves that need by building machine learning from scratch in NumPy, with a transformer whose gradients are verified against finite differences, so the machine can be explained from first principles.
+
+Unmet, it looks like: whole populations subject to systems they cannot question, skills and standing allocated by black boxes, dependence dressed up as convenience.
+
+The full map: [The Bedrock, a map of human needs](https://github.com/jthomas48896f/jthomas48896f/blob/main/NEEDS.md)
+
 > **Act 3, the Machine**, in a five part body of work built on one
 > thesis: technology should increase human capability without taking
 > human agency away.
