@@ -32,7 +32,7 @@ Aurora Commons addresses the hierarchy of human needs through open source.
 
 Motto: Stand on the shoulders of giants.
 
-One rule: Raise the floor beneath everyone.
+One rule: raise the floor beneath everyone.
 
 Advised by Groundskeeper.
 
@@ -255,7 +255,7 @@ Unlocks the ability to build.
 <footer class="commons-footer">
   <p>Aurora Commons addresses the hierarchy of human needs through open source.</p>
   <p>Motto: Stand on the shoulders of giants.</p>
-  <p>One rule: Raise the floor beneath everyone.</p>
+  <p>One rule: raise the floor beneath everyone.</p>
   <p>Advised by Groundskeeper.</p>
   <p><a href="https://www.linkedin.com/company/aurora-commons-io/">Aurora Commons on LinkedIn</a></p>
 </footer>
