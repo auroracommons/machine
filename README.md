@@ -93,6 +93,28 @@ Gutenberg 1041) for 250 steps with Adam.
   not. That is what 250 steps buys at this scale, and the artifact
   shows it rather than a cherry-picked later run.
 
+**Second benchmark task: character level training run on a second
+corpus** (`scripts/train_char_lm.py --data
+data/alice_in_wonderland.txt`, `results/alice_char_lm_run.json`):
+the same configuration and step count as the sonnets run, trained
+on Alice's Adventures in Wonderland by Lewis Carroll (145,275
+characters, vocabulary 80, public domain, Project Gutenberg 11,
+first published 1865) for 250 steps with Adam. The parameter count
+differs from the sonnets run because the vocabulary is larger, and
+both counts are printed by the code, not asserted by hand.
+
+- Parameters: **360,368** (counted by the code)
+- Validation loss: **5.725 at step 0 to 2.417 at step 250**
+  (training loss 5.673 to 2.414)
+- Mean step time 1.64 s in that environment (NumPy 1.26.4, a small
+  shared CPU). Wall time 477 s.
+- This was a single run, recorded as measured. The generated sample
+  in the artifact has recognizable words and dialogue punctuation,
+  but its sentences do not hold together. That is the same honest
+  limit as the sonnets sample at this scale, on a prose corpus
+  instead of verse, which is what a second task is for: the loss
+  curves of the two corpora can now be compared in `results/`.
+
 **PyTorch benchmark** (`scripts/benchmark_pytorch.py`,
 `results/benchmark_pytorch.json`): an equivalent PyTorch transformer
 (same configuration, identical parameter count of 358,052, same
@@ -121,6 +143,7 @@ pip install numpy matplotlib
 python main.py                          # the original 10 demos, figures to figures/
 python -m unittest discover -s tests    # gradient checks + training smoke
 python scripts/train_char_lm.py         # the 250 step sonnet run (~9 minutes)
+python scripts/train_char_lm.py --data data/alice_in_wonderland.txt --corpus "Alice's Adventures in Wonderland by Lewis Carroll" --source "Project Gutenberg ebook 11, public domain" --prompt "Alice was beginning" --out results/alice_char_lm_run.json   # the 250 step Alice run (~8 minutes)
 ```
 
 ### Project structure
@@ -137,14 +160,15 @@ neural_net_lab/
   datasets.py      - Procedural toy dataset generators
   visualization.py - Plotting utilities
 scripts/
-  train_char_lm.py       - Character LM training run (writes results/)
+  train_char_lm.py       - Character LM training runs (writes results/)
   benchmark_pytorch.py   - NumPy vs PyTorch comparison (needs torch)
 tests/
   test_transformer_gradients.py
 data/
   shakespeare_sonnets.txt - Public domain corpus (Gutenberg 1041)
+  alice_in_wonderland.txt - Public domain corpus (Gutenberg 11)
 results/
-  char_lm_run.json, benchmark_pytorch.json
+  char_lm_run.json, alice_char_lm_run.json, benchmark_pytorch.json
 ```
 
 ### Status and limitations

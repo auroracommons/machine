@@ -1,16 +1,28 @@
 #!/usr/bin/env python3
 """
 Train the from scratch NumPy transformer as a character level language
-model on Shakespeare's sonnets (public domain, Project Gutenberg 1041).
+model on a public domain corpus. The default corpus is Shakespeare's
+sonnets (public domain, Project Gutenberg 1041), which reproduces the
+original run. A second corpus, Alice's Adventures in Wonderland by
+Lewis Carroll (public domain, Project Gutenberg 11), is the second
+benchmark task and is run with the same configuration:
 
-Every number printed here is also written to results/char_lm_run.json
-in the repo, and the README quotes that file, not this terminal.
+    python scripts/train_char_lm.py --data data/alice_in_wonderland.txt \
+        --corpus "Alice's Adventures in Wonderland by Lewis Carroll" \
+        --source "Project Gutenberg ebook 11, public domain" \
+        --prompt "Alice was beginning" \
+        --out results/alice_char_lm_run.json
+
+Every number printed here is also written to the JSON artifact named
+by --out, and the README quotes that file, not this terminal.
 
 Usage:
     python scripts/train_char_lm.py [--steps 250] [--seed 42]
                                     [--d-model 96] [--n-layer 3]
                                     [--n-head 4] [--block-size 96]
                                     [--batch-size 16] [--lr 0.003]
+                                    [--data data/shakespeare_sonnets.txt]
+                                    [--prompt "Shall I compare thee"]
                                     [--out results/char_lm_run.json]
 """
 
@@ -49,10 +61,14 @@ def main():
     ap.add_argument("--batch-size", type=int, default=16)
     ap.add_argument("--lr", type=float, default=0.003)
     ap.add_argument("--eval-every", type=int, default=50)
+    ap.add_argument("--data", default=str(REPO / "data" / "shakespeare_sonnets.txt"))
+    ap.add_argument("--corpus", default="Shakespeare's sonnets by William Shakespeare")
+    ap.add_argument("--source", default="Project Gutenberg ebook 1041, public domain")
+    ap.add_argument("--prompt", default="Shall I compare thee")
     ap.add_argument("--out", default=str(REPO / "results" / "char_lm_run.json"))
     args = ap.parse_args()
 
-    text = (REPO / "data" / "shakespeare_sonnets.txt").read_text(encoding="utf-8")
+    text = Path(args.data).read_text(encoding="utf-8")
     chars = sorted(set(text))
     stoi = {c: i for i, c in enumerate(chars)}
     itos = {i: c for c, i in stoi.items()}
@@ -77,6 +93,7 @@ def main():
             losses.append(loss_fn.forward(logits.reshape(-1, V), y.reshape(-1)))
         return float(np.mean(losses))
 
+    print(f"corpus: {args.corpus}  source: {args.source}")
     print(f"corpus chars: {len(data)}  vocab: {V}  params: {model.count_parameters()}")
     print(f"config: d_model={args.d_model} layers={args.n_layer} heads={args.n_head} "
           f"block={args.block_size} batch={args.batch_size} lr={args.lr}")
@@ -105,7 +122,7 @@ def main():
     wall = time.perf_counter() - t0
 
     # Sample with a fixed seed so the artifact is reproducible
-    prompt = "Shall I compare thee"
+    prompt = args.prompt
     start = np.array([stoi[c] for c in prompt])
     sample_ids = model.generate(start, 300, temperature=0.8,
                                 rng=np.random.default_rng(7))
@@ -118,6 +135,9 @@ def main():
             "batch_size": args.batch_size, "lr": args.lr,
             "steps": args.steps, "seed": args.seed,
         },
+        "corpus": args.corpus,
+        "source": args.source,
+        "data_file": Path(args.data).name,
         "corpus_chars": int(len(data)),
         "vocab_size": V,
         "parameters": model.count_parameters(),

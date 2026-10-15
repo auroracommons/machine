@@ -1,0 +1,60 @@
+{
+  "config": {
+    "d_model": 96,
+    "n_layer": 3,
+    "n_head": 4,
+    "block_size": 96,
+    "batch_size": 16,
+    "lr": 0.003,
+    "steps": 250,
+    "seed": 42
+  },
+  "corpus": "Alice's Adventures in Wonderland by Lewis Carroll",
+  "source": "Project Gutenberg ebook 11, public domain",
+  "data_file": "alice_in_wonderland.txt",
+  "corpus_chars": 145275,
+  "vocab_size": 80,
+  "parameters": 360368,
+  "initial_train_loss": 5.672820394304521,
+  "initial_val_loss": 5.724981697508387,
+  "final_train_loss": 2.4137254779280233,
+  "final_val_loss": 2.417159870458199,
+  "history": [
+    {
+      "step": 0,
+      "train_loss": 5.672820394304521,
+      "val_loss": 5.724981697508387
+    },
+    {
+      "step": 50,
+      "train_loss": 2.696021167955861,
+      "val_loss": 2.708868594001565
+    },
+    {
+      "step": 100,
+      "train_loss": 2.55694521696577,
+      "val_loss": 2.5622169567017834
+    },
+    {
+      "step": 150,
+      "train_loss": 2.4889065314532446,
+      "val_loss": 2.4843517444935075
+    },
+    {
+      "step": 200,
+      "train_loss": 2.4584426011216323,
+      "val_loss": 2.447988124627306
+    },
+    {
+      "step": 250,
+      "train_loss": 2.4137254779280233,
+      "val_loss": 2.417159870458199
+    }
+  ],
+  "wall_seconds": 476.6776367620005,
+  "mean_step_ms": 1636.9483008079878,
+  "python": "3.12.3",
+  "numpy": "1.26.4",
+  "sample_prompt": "Alice was beginning",
+  "sample_text": "Alice was beginningetleco tond eaney, \u201cI o I!\u201d sed Alice\n\u201cDerereg sered he ththe t ice \u201cIt thatour bur the icat okice ave oupllf, wavathang shen be hond weve, therer ino thedof bbero red fuplim itit withid I e qke t fuithe p tto he sinouemped parerofloue s owe is h, thed ce athe t ad uinoo iteifoure ang d to borivithe"
+}
