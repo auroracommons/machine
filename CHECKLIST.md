@@ -18,6 +18,7 @@ State as of October 15, 2026. Every line carries its evidence; a line without ev
 - [x] Tagged release: v0.1.0, first verified baseline (published, marked Latest)
 - [x] Live demo: https://topsoilcommons.github.io/machine/ (render verified October 15, 2026)
 - [x] Fresh baseline rerun October 15, 2026: python3 -m unittest discover -s tests, 7 tests, OK
+- [x] First outside contribution merged October 16, 2026: pull request #3 by shyam1017, finite difference gradient checks for the Dense, BatchNorm, and Dropout layers (good first issue #1, now closed). Verified before merging by running the full suite on the PR branch: 16 tests, OK (7 baseline plus 9 new). Suite on main after the merge: 16 tests, OK. The original 7 of 7 transformer gradient checks in the line above are unchanged; the suite total is now 16.
 
 ## Working agreements
 - AGENTS.md in this repo governs how changes are made and proven here.
