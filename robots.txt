@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://topsoilcommons.github.io/machine/sitemap.xml
