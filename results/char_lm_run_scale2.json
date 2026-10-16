@@ -1,0 +1,55 @@
+{
+  "config": {
+    "d_model": 128,
+    "n_layer": 3,
+    "n_head": 4,
+    "block_size": 128,
+    "batch_size": 16,
+    "lr": 0.003,
+    "steps": 200,
+    "seed": 42
+  },
+  "corpus": "Shakespeare's sonnets by William Shakespeare",
+  "source": "Project Gutenberg ebook 1041, public domain",
+  "data_file": "shakespeare_sonnets.txt",
+  "corpus_chars": 96427,
+  "vocab_size": 68,
+  "parameters": 628932,
+  "initial_train_loss": 5.378641586029663,
+  "initial_val_loss": 5.395530192017505,
+  "final_train_loss": 2.402960089033858,
+  "final_val_loss": 2.440514366813467,
+  "history": [
+    {
+      "step": 0,
+      "train_loss": 5.378641586029663,
+      "val_loss": 5.395530192017505
+    },
+    {
+      "step": 50,
+      "train_loss": 2.6387167275077092,
+      "val_loss": 2.661209098255847
+    },
+    {
+      "step": 100,
+      "train_loss": 2.4721363420186777,
+      "val_loss": 2.509390450856099
+    },
+    {
+      "step": 150,
+      "train_loss": 2.4277608983841255,
+      "val_loss": 2.4651928684206728
+    },
+    {
+      "step": 200,
+      "train_loss": 2.402960089033858,
+      "val_loss": 2.440514366813467
+    }
+  ],
+  "wall_seconds": 851.8148277790006,
+  "mean_step_ms": 3695.686431489976,
+  "python": "3.12.3",
+  "numpy": "1.26.4",
+  "sample_prompt": "Shall I compare thee",
+  "sample_text": "Shall I compare theefrondickme f min\u2019sey bie neseand\nAn h t dorrer ndone he tewheel ld ay s thatrthakse the,\nAereang h ay inonend, ves thang pren be gthe wexeavee;\nAs ket theeve,\n bus oreimy re  ispr ustho   ce o ofe frerin o tss gaingaus tollll serongrs  s owe mo harond:\n ge the t aies ere is s sloul my d, t briowroum"
+}

@@ -80,6 +80,33 @@ Gutenberg 1041) for 250 steps with Adam.
   not. That is what 250 steps buys at this scale, and the artifact
   shows it rather than a cherry-picked later run.
 
+**Scale step: character level training run at the next size**
+(`scripts/train_char_lm.py`, `results/char_lm_run_scale2.json`,
+run 2026-10-16): a 628,932 parameter transformer (d_model 128,
+3 layers, 4 heads, context 128, batch 16) trained on the same
+Shakespeare's sonnets corpus (96,427 characters, vocabulary 68)
+with the same seed and Adam settings. That is about 1.76x the
+parameter count of the 358,052 parameter baseline above. A short
+profiling run at this configuration projected a 250 step run at
+or over the roughly 20 minute wall time budget for this pass, so
+this run uses 200 steps rather than a smaller model; the tradeoff
+is recorded here instead of hidden.
+
+- Validation loss: **5.396 at step 0 to 2.441 at step 200**
+  (training loss 5.379 to 2.403)
+- Mean step time 3.70 s in that environment (NumPy 1.26.4, a small
+  shared CPU). Wall time 852 s.
+- Honest comparison: the final validation loss, 2.441 after
+  200 steps, is slightly above the smaller baseline's 2.413 after
+  250 steps, so the larger model did not beat the baseline loss
+  in this run; it reached a comparable loss with 50 fewer steps.
+- The generated sample in the artifact is, honestly, still
+  sonnet-shaped static: line lengths, punctuation, and some short
+  real words are learned, the words mostly are not, and the
+  sentences do not hold together. The scale step alone did not
+  fix sample quality at this step count, and the artifact shows
+  it rather than a cherry-picked later run.
+
 **Second benchmark task: character level training run on a second
 corpus** (`scripts/train_char_lm.py --data
 data/alice_in_wonderland.txt`, `results/alice_char_lm_run.json`):
@@ -130,6 +157,7 @@ pip install numpy matplotlib
 python main.py                          # the original 10 demos, figures to figures/
 python -m unittest discover -s tests    # gradient checks + training smoke
 python scripts/train_char_lm.py         # the 250 step sonnet run (~9 minutes)
+python scripts/train_char_lm.py --steps 200 --d-model 128 --n-layer 3 --n-head 4 --block-size 128 --batch-size 16 --out results/char_lm_run_scale2.json   # the 200 step scale run (~14 minutes)
 python scripts/train_char_lm.py --data data/alice_in_wonderland.txt --corpus "Alice's Adventures in Wonderland by Lewis Carroll" --source "Project Gutenberg ebook 11, public domain" --prompt "Alice was beginning" --out results/alice_char_lm_run.json   # the 250 step Alice run (~8 minutes)
 ```
 
@@ -156,7 +184,8 @@ data/
   shakespeare_sonnets.txt - Public domain corpus (Gutenberg 1041)
   alice_in_wonderland.txt - Public domain corpus (Gutenberg 11)
 results/
-  char_lm_run.json, alice_char_lm_run.json, benchmark_pytorch.json
+  char_lm_run.json, char_lm_run_scale2.json,
+  alice_char_lm_run.json, benchmark_pytorch.json
 ```
 
 ### Status and limitations
