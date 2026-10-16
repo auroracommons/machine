@@ -150,6 +150,7 @@ scripts/
   train_char_lm.py       - Character LM training runs (writes results/)
   benchmark_pytorch.py   - NumPy vs PyTorch comparison (needs torch)
 tests/
+  test_layer_gradients.py
   test_transformer_gradients.py
 data/
   shakespeare_sonnets.txt - Public domain corpus (Gutenberg 1041)
