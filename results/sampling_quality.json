@@ -1,0 +1,57 @@
+{
+  "model": {
+    "vocab_size": 68,
+    "parameters": 112964,
+    "d_model": 64,
+    "num_layers": 2,
+    "num_heads": 4,
+    "block_size": 64,
+    "batch_size": 16,
+    "lr": 0.003,
+    "steps": 120,
+    "seed": 42
+  },
+  "training": {
+    "first_loss": 5.3,
+    "last_loss": 2.484,
+    "wall_seconds": 41.0
+  },
+  "prompt": "Shall I compare thee",
+  "corpus_window_quality": {
+    "chars": 300,
+    "distinct_1": 0.1633,
+    "distinct_2": 0.5953,
+    "most_common_char": "e",
+    "most_common_char_share": 0.1233
+  },
+  "samples": [
+    {
+      "temperature": 0.5,
+      "chars": 300,
+      "distinct_1": 0.0867,
+      "distinct_2": 0.3144,
+      "most_common_char": " ",
+      "most_common_char_share": 0.2267,
+      "sample": " we tor t,\n te wind s that rorse out prin orin f t be ar t wove thound thare alouloumarth sthe maner wake bu t s moud y theathanos stheve,\nHout t wind t cthare stin be oure cathathave marit t counore s w in st the t swhee pe the be winor the y wind t t ngrin ber theshinou ret than and t st re thar t"
+    },
+    {
+      "temperature": 1.0,
+      "chars": 300,
+      "distinct_1": 0.1067,
+      "distinct_2": 0.505,
+      "most_common_char": " ",
+      "most_common_char_share": 0.1567,
+      "sample": " ntwoull r t yath aivid he achireat d d.\nblsthotano towon wllllisveais;\nLhotoly pbige, wof wht vest  s ijy y hetine, the apo my the rerdooloureectorurerroumy y  itd eathel thoskinker\u2019ndvees ore mee te!\nWonorfou do  pveteljrsthay\u2019de est ar n re not minoit drotrowco ccutinthllu t wikeerorlllllooore th"
+    },
+    {
+      "temperature": 1.5,
+      "chars": 300,
+      "distinct_1": 0.1733,
+      "distinct_2": 0.7291,
+      "most_common_char": " ",
+      "most_common_char_share": 0.0933,
+      "sample": "arn  alold Yvhirl-trmaruy,\nCoru\u2019xg;VWnl pe astektot ye licwive?\nY,tiSem hos\u2019cpinfempmomhonechavs:\nWhame p?\nAnetithold;\nAndaru m, bCsththond\nWh ate?Nanztow,\nMy\u2019! G, od at Od,\u2018emat.\nNfr?\nEx Ho, su;\nWifakiWrit badfonToutrduyone pe!\n\n hy Fsverksee sXX:\nFf XImoude  hle\u2019dattnfale.\ngwevausitou  saqarw\nHo;\n"
+    }
+  ],
+  "note": "One small model, one seed, one prompt. These numbers describe this run, not the lab's larger runs."
+}

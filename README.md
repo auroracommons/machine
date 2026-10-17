@@ -80,6 +80,23 @@ Gutenberg 1041) for 250 steps with Adam.
   not. That is what 250 steps buys at this scale, and the artifact
   shows it rather than a cherry-picked later run.
 
+**Sampling quality, measured** (`scripts/sample_quality.py`,
+`results/sampling_quality.json`, run 2026-10-17): one small model
+(112,964 parameters, d_model 64, 2 layers, trained 120 steps, loss
+5.300 to 2.484) sampled 300 characters from the same prompt at
+three temperatures, each sample measured the same way. At
+temperature 0.5 the sample collapses toward repetition: its most
+common character fills 22.7 percent of the sample and only 31.4
+percent of its character pairs are distinct, against 59.5 percent
+distinct pairs in a same-length window of the real corpus. At
+temperature 1.0 the pair figure rises to 50.5 percent. At
+temperature 1.5 it reads 72.9 percent, above the corpus window,
+and that is not quality: at that temperature the sampling is
+closer to random, and random text also scores high on distinct
+pairs. The honest reading is the one the numbers support together:
+low temperature repeats, high temperature wanders, and neither is
+writing. One model, one seed, one prompt; the artifact says so.
+
 **Scale step: character level training run at the next size**
 (`scripts/train_char_lm.py`, `results/char_lm_run_scale2.json`,
 run 2026-10-16): a 628,932 parameter transformer (d_model 128,
