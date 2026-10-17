@@ -37,7 +37,10 @@ where the script measures the library against it.
 - **Layers**: Dense, Dropout, BatchNorm, and the transformer stack
   below
 - **Transformer** (`neural_net_lab/transformer.py`): layer
-  normalization, multi-head causal self attention, feed-forward
+  normalization, RMS normalization (RMSNorm, verified by the
+  finite difference gradient checks in
+  `tests/test_transformer_gradients.py`), multi-head causal self
+  attention, feed-forward
   blocks, pre-norm residual blocks, token and positional embeddings,
   and a character level language model. Every backward pass is hand
   derived in the same explicit style as the original layers.
@@ -184,7 +187,7 @@ python scripts/train_char_lm.py --data data/alice_in_wonderland.txt --corpus "Al
 neural_net_lab/
   tensor.py        - Custom tensor with autograd
   layers.py        - Dense, Dropout, BatchNorm, Parameter
-  transformer.py   - LayerNorm, attention, blocks, char LM
+  transformer.py   - LayerNorm, RMSNorm, attention, blocks, char LM
   activations.py   - Activation functions
   losses.py        - Loss functions
   optimizers.py    - Optimizers and LR schedulers

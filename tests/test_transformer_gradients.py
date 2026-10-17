@@ -25,7 +25,7 @@ import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from neural_net_lab.transformer import (
-    LayerNorm, MultiHeadSelfAttention, FeedForward, TransformerBlock,
+    LayerNorm, RMSNorm, MultiHeadSelfAttention, FeedForward, TransformerBlock,
     CharTransformerLM,
 )
 from neural_net_lab.losses import CrossEntropyLoss
@@ -96,6 +96,23 @@ class TestLayerNormGradients(unittest.TestCase):
         layer.beta.data = rng.standard_normal(8)
         x = rng.standard_normal((3, 5, 8))
         check_layer(self, layer, x, seed=1)
+
+
+# Why: RMSNorm drops LayerNorm's mean-centering term, so its backward is a distinct derivation that needs its own finite-difference proof (input and gain).
+class TestRMSNormGradients(unittest.TestCase):
+    def test_gradients(self):
+        rng = np.random.default_rng(8)
+        layer = RMSNorm(8)
+        layer.gamma.data = rng.standard_normal(8)
+        x = rng.standard_normal((3, 5, 8))
+        check_layer(self, layer, x, seed=8)
+
+    def test_gradients_scaled_input(self):
+        rng = np.random.default_rng(9)
+        layer = RMSNorm(4)
+        layer.gamma.data = rng.standard_normal(4)
+        x = rng.standard_normal((2, 4, 4)) * 3.0 + 1.5
+        check_layer(self, layer, x, seed=9)
 
 
 class TestAttentionGradients(unittest.TestCase):

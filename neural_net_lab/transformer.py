@@ -64,6 +64,49 @@ class LayerNorm(Layer):
         return [self.gamma, self.beta]
 
 
+class RMSNorm(Layer):
+    """
+    Root mean square normalization over the last axis.
+
+    y = gamma * x / sqrt(mean(x^2) + eps)
+
+    Unlike LayerNorm there is no mean centering and no bias: the
+    scale is set by the root mean square alone, and the only learned
+    parameter is the gain gamma.
+    """
+
+    def __init__(self, num_features, eps=1e-5):
+        super().__init__()
+        self.num_features = num_features
+        self.eps = eps
+        self.gamma = Parameter(np.ones(num_features))
+
+    def forward(self, x):
+        self._x = x
+        self._rms_inv = 1.0 / np.sqrt(
+            np.mean(x * x, axis=-1, keepdims=True) + self.eps)
+        self._x_hat = x * self._rms_inv
+        return self.gamma.data * self._x_hat
+
+    def backward(self, grad_output):
+        # Parameter gradient: sum over all leading axes
+        lead_axes = tuple(range(grad_output.ndim - 1))
+        self.gamma.grad += (grad_output * self._x_hat).sum(axis=lead_axes)
+
+        dx_hat = grad_output * self.gamma.data
+        # RMSNorm backward (per row of the last axis): like LayerNorm
+        # without the mean(dx_hat) term, since there is no centering.
+        # dx = rms_inv * (dx_hat - x_hat * mean(dx_hat * x_hat))
+        dx = self._rms_inv * (
+            dx_hat
+            - self._x_hat * (dx_hat * self._x_hat).mean(axis=-1, keepdims=True)
+        )
+        return dx
+
+    def parameters(self):
+        return [self.gamma]
+
+
 class MultiHeadSelfAttention(Layer):
     """
     Multi-head self attention with an optional causal mask.
