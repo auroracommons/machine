@@ -14,7 +14,7 @@ State as of October 15, 2026. Every line carries its evidence; a line without ev
 ## The extra 10 percent
 - [x] CI green on GitHub runners (verified October 15, 2026)
 - [x] Repo description and topics set (description states the verified results)
-- [x] Good first issues open: #1 gradient check for Dense, BatchNorm, or Dropout, #2 run the PyTorch benchmark on your machine (both labeled good first issue, sized in hours)
+- [x] Good first issues open: #2 run the PyTorch benchmark on your machine, #4 add a gradient check for the optimizer step (both labeled good first issue, sized in hours; verified open 2026-10-17, and #1 closed by PR #3)
 - [x] Tagged release: v0.1.0, first verified baseline (published, marked Latest)
 - [x] Live demo: https://topsoilcommons.github.io/machine/ (render verified October 15, 2026)
 - [x] Fresh baseline rerun October 15, 2026: python3 -m unittest discover -s tests, 7 tests, OK

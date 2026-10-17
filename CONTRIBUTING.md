@@ -14,20 +14,37 @@ python -m unittest discover -s tests   # gradient checks + training smoke
 python main.py                         # the original demos
 ```
 
+The benchmark script also needs PyTorch, which the lab itself does
+not depend on. Install it (CPU wheel) before running the benchmark:
+
+```bash
+pip install torch --index-url https://download.pytorch.org/whl/cpu
+```
+
 ## Good first issues (sized in hours)
 
-- **Add a gradient check (1 to 2 hours).** The original layers
-  (Dense, BatchNorm, Dropout) predate the test suite. Pick one and
-  add a finite difference check in the style of
-  `tests/test_transformer_gradients.py`.
+- **Add a check for the optimizer step (1 to 2 hours, issue #4).**
+  The gradient checks cover the transformer and the original layers
+  (Dense, BatchNorm, and Dropout, added in PR #3). The optimizers in
+  `neural_net_lab/optimizers.py` have no equivalent check. Pick one
+  optimizer (SGD with momentum or Adam), drive it on a small
+  quadratic problem where the correct step is known, and add a test
+  in the existing style that shows the parameters move by the
+  expected amount.
 - **Grow the eval corpus (about an hour).** Add one public domain
   text to `data/` with its source named, and record the trained
   model's loss on it next to the sonnets run. Comparisons across
   corpora teach more than single numbers.
-- **Run the benchmark on your machine (under an hour).** Run
-  `scripts/benchmark_pytorch.py` and file the JSON with your CPU and
-  thread counts noted. The published table is one machine; more
-  machines make it a measurement instead of an anecdote.
+- **Run the benchmark on your machine (under an hour, issue #2).**
+  Install PyTorch first (see Setup above), then run
+  `python scripts/benchmark_pytorch.py --out /tmp/benchmark_pytorch.json`
+  and file the resulting JSON in issue #2. Write to a new file: the
+  default `--out` overwrites the published
+  `results/benchmark_pytorch.json`. The JSON records the PyTorch
+  thread count, but not your CPU model, so note the CPU model in
+  the issue yourself (for example from `lscpu` or your system
+  information). The published table is one machine; more machines
+  make it a measurement instead of an anecdote.
 - **Write the missing explanation (1 to 2 hours).** The README
   explains that the key bias gradient is zero by symmetry. Pick one
   other gradient in `transformer.py` and write its derivation as a
